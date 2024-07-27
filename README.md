@@ -23,8 +23,8 @@ To run this project locally, follow these steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repository.git
-   cd your-repository
+   git clone https://github.com/AjayAchugatla/Movies.git
+   cd Movies
 
 2. **Run the command:**
      ```bash
