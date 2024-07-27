@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>MoViEs</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/submit" method="POST">
+            <div class="search-container">
+                <input type="text" placeholder="Enter movie name heree..." name="mname" required>
+                <button id="search-btn" type="submit">Search</button>
+            </div>
+        </form>
+
+        <% if (locals.title) { %>
+            <div class="result">
+                <img src="<%= image %>" alt="">
+                <div class="content">
+                    <h2><%= title %></h2>
+                    <span>⭐ <%= rating %></span>
+                    <div class="len">
+                        <span><%= year %></span>
+                        <span><%= time %></span>
+                    </div>
+                    <div class="genre">
+                        <% for( let i = 0; i < genre.length; i++ ) { %>
+                            <span><%= genre[i] %></span>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <div class="det">
+                <div class="plot">
+                    <h2>Plot:</h2>
+                    <p><%= plot %></p>
+                </div>
+                <div class="cast">
+                    <h2>Cast:</h2>
+                    <p><%= cast[0] %>, <%= cast[1] %>, <%= cast[2] %></p>
+                </div>
+            </div>
+        <% } %>
+
+        <% if (locals.msg) { %>
+            <div class="err">
+                <h1><%= msg %></h1>
+            </div>
+        <% } %>
+    </div>
+</body>
+
+</html>
