@@ -6,7 +6,6 @@ A simple web application that provides information about movies based on user se
 
 - Search for movies and view detailed information.
 - Responsive design with modern UI/UX.
-- Real-time search results with no page reload.
 
 ## Technologies Used
 
